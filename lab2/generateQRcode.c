@@ -53,7 +53,7 @@ main(int argc, char * argv[])
 
 	char URI[100];
 
-  strcpy(URI,"otpauth://");
+  strcpy(strcpy(strcpy(URI,"otpauth://"),otp),accountName);
   printf("URI: %s", URI);
 
 	// displayQRcode("otpauth://testing");
