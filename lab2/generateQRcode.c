@@ -35,26 +35,21 @@ main(int argc, char * argv[])
 	// 	secret_hex,
 	// 	otp=="hotp" ? "counter=1" : "period=30"
 	// );
-	// char URI[100] = "";
-	// strcat(URI,"otpauth://");
-	// strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(
-	// 	URI,"otpauth://"),
-	// 	otp),
-	// 	"/"),
-	// 	accountName),
-	// 	"?issuer="),
-	// 	issuer),
-	// 	"&secret="),
-	// 	secret_hex),
-	// 	"&"),
-	// 	otp=="hotp" ? "counter=1" : "period=30"),
-	// 	"\0");
-	// printf("URI: %s", URI);
-
 	char URI[100];
+	strcat(strcat(strcat(strcat(strcat(strcat(strcat(strcat(strcat(strcat(strcpy(
+		URI,"otpauth://"),
+		otp),
+		"/"),
+		accountName),
+		"?issuer="),
+		issuer),
+		"&secret="),
+		secret_hex),
+		"&"),
+		otp=="hotp" ? "counter=1" : "period=30"),
+		"\0");
+	printf("URI: %s", URI);
 
-  strcat(strcat(strcpy(URI,"otpauth://"),otp),accountName);
-  printf("URI: %s", URI);
 
 	// displayQRcode("otpauth://testing");
 
