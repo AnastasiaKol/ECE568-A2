@@ -36,6 +36,7 @@ main(int argc, char * argv[])
 	// 	otp=="hotp" ? "counter=1" : "period=30"
 	// );
 	char URI[100] = "";
+	char * p = URI;
 	// strcat(URI,"otpauth://");
 	strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(
 		URI,"otpauth://"),
@@ -49,7 +50,7 @@ main(int argc, char * argv[])
 		"&"),
 		otp=="hotp" ? "counter=1" : "period=30"),
 		"\0");
-	printf("URI: %s", URI);
+	printf("URI: %s", p);
 
 	// displayQRcode("otpauth://testing");
 
