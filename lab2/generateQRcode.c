@@ -36,7 +36,7 @@ main(int argc, char * argv[])
 	// 	otp=="hotp" ? "counter=1" : "period=30"
 	// );
 	char URI[100] = "";
-	strcat(URI,"otpauth://");
+	// strcat(URI,"otpauth://");
 	strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(strcpy(
 		URI,"otpauth://"),
 		otp),
