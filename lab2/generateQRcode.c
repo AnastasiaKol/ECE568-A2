@@ -7,27 +7,27 @@
 
 uint8_t * hex_to_uint8(const char* hex_str, size_t hex_len) {
 
-    size_t uint8_len = hex_len / 2;
-		uint8_t * uint8_str = (uint8_t *)malloc(uint8_len);
-		memset(uint8_str, 0, uint8_len);
-		size_t i = 0;
+	size_t uint8_len = hex_len / 2;
+	uint8_t * uint8_str = (uint8_t *)malloc(uint8_len);
+	memset(uint8_str, 0, uint8_len);
+	size_t i = 0;
 
-    while (i < hex_len) {
-        char c = hex_str[i];
-        int value = 0;
-        if (c >= '0' && c <= '9')
-            value = (c - '0');
-        else if (c >= 'A' && c <= 'F')
-            value = (10 + (c - 'A'));
-        else if (c >= 'a' && c <= 'f')
-            value = (10 + (c - 'a'));
-        else
-            return NULL;
-        uint8_str[(i / 2)] += value << (((i + 1) % 2) * 4);
-        i++;
-    }
+	while (i < hex_len) {
+	  char c = hex_str[i];
+	  int value = 0;
+	  if (c >= '0' && c <= '9')
+      value = (c - '0');
+	  else if (c >= 'A' && c <= 'F')
+      value = (10 + (c - 'A'));
+	  else if (c >= 'a' && c <= 'f')
+      value = (10 + (c - 'a'));
+	  else
+      return NULL;
+	  uint8_str[(i / 2)] += value << (((i + 1) % 2) * 4);
+	  i++;
+	}
 
-    return uint8_str;
+	return uint8_str;
 }
 
 int
