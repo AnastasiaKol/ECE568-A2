@@ -1,0 +1,5 @@
+Two-Factor Authentication
+
+generateQRcode - generates the URI output and QR barcode
+
+validateQRcode - verifies whether the user has provided correct values HOTP/TOTP
